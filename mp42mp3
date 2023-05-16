@@ -1,0 +1,13 @@
+from moviepy.editor import VideoFileClip
+
+def extract_audio(mp4_file, audio_file):
+    video = VideoFileClip(mp4_file)
+    audio = video.audio
+    audio.write_audiofile(audio_file)
+
+# Rutas de archivo de entrada y salida
+mp4_file = 'ruta_del_archivo.mp4'
+audio_file = 'ruta_del_archivo.mp3'
+
+# Extraer el audio del archivo MP4
+extract_audio(mp4_file, audio_file)
